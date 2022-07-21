@@ -22,5 +22,8 @@
   "homepage": "https://github.com/winerar/backend-project-lvl1#readme",
   "devDependencies": {
     "make": "^0.8.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
