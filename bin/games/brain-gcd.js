@@ -18,8 +18,8 @@ const playGCDGame = () => {
   let playerLost = false;
 
   for (let i = 1; i <= brain.maxRoundsCount; i += 1) {
-    const number1 = brain.getRandomNumber(10);
-    const number2 = brain.getRandomNumber(10);
+    const number1 = brain.getRandomNumber(101);
+    const number2 = brain.getRandomNumber(101);
 
     const correctAnswer = gcd(number1, number2);
 
