@@ -9,3 +9,5 @@
 <a href="https://asciinema.org/a/510199" target="_blank"><img src="https://asciinema.org/a/510199.svg" /></a>
 #### brain-progression.js:
 <a href="https://asciinema.org/a/510260" target="_blank"><img src="https://asciinema.org/a/510260.svg" /></a>
+### brain-prime.js:
+<a href="https://asciinema.org/a/510275" target="_blank"><img src="https://asciinema.org/a/510275.svg" /></a>
