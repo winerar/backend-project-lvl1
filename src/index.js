@@ -1,11 +1,13 @@
 import readlineSync from 'readline-sync';
 
+export const maxRoundsCount = 3;
+
 export const showGreeting = () => {
   console.log('Welcome to the Brain Games!');
 };
 
 export const getPlayerName = () => {
-  const name = readlineSync.question('May I have your name? ').trim();
+  const name = readlineSync.question('May I have your name? ').trim() || '%username%';
   console.log(`Hello, ${name}!`);
   return name;
 };
@@ -35,3 +37,5 @@ export const showResult = (playerName, playerLost) => {
     showCongratulation(playerName);
   }
 };
+
+export const getRandomNumber = (maxNumber) => Math.floor(Math.random() * maxNumber);

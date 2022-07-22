@@ -1,20 +1,19 @@
 #!/usr/bin/env node
-import * as brainUtils from '../src/brain-utils.js';
+import * as brain from '../../src/index.js';
 
 const playCalcGame = () => {
-  brainUtils.showGreeting();
+  brain.showGreeting();
 
-  const playerName = brainUtils.getPlayerName();
+  const playerName = brain.getPlayerName();
 
   console.log('What is the result of the expression?');
 
   let playerLost = false;
 
-  const questionsCount = 3;
-  for (let i = 1; i <= questionsCount; i += 1) {
-    const number1 = Math.ceil(Math.random() * 20);
-    const number2 = Math.ceil(Math.random() * 10);
-    const operation = Math.ceil(Math.random() * 10) % 3;
+  for (let i = 1; i <= brain.maxRoundsCount; i += 1) {
+    const number1 = brain.getRandomNumber(50);
+    const number2 = brain.getRandomNumber(50);
+    const operation = brain.getRandomNumber(3);
 
     let correctAnswer;
     let operator;
@@ -26,12 +25,12 @@ const playCalcGame = () => {
     }
 
     console.log(`Question: ${number1} ${operator} ${number2}`);
-    playerLost = !brainUtils.checkPlayerAnswer(correctAnswer);
+    playerLost = !brain.checkPlayerAnswer(correctAnswer);
     if (playerLost) {
       break;
     }
   }
-  brainUtils.showResult(playerName, playerLost);
+  brain.showResult(playerName, playerLost);
 };
 
 playCalcGame();
