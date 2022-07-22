@@ -41,3 +41,22 @@ export const showResult = (playerName, playerLost) => {
     showCongratulation(playerName);
   }
 };
+
+export const startGame = (task, getQuestionAndAnswer) => {
+  showGreeting();
+  const playerName = getPlayerName();
+  showMessage(task);
+  let playerLost = false;
+  for (let i = 1; i <= maxRoundsCount; i += 1) {
+    const questionAndAnswer = getQuestionAndAnswer();
+
+    const questionText = `Question: ${questionAndAnswer.question}`;
+    showMessage(questionText);
+
+    playerLost = !checkPlayerAnswer(questionAndAnswer.answer);
+    if (playerLost) {
+      break;
+    }
+  }
+  showResult(playerName, playerLost);
+};
