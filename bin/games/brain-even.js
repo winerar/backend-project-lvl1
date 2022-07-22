@@ -1,29 +1,28 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import * as brain from '../../src/index.js';
 
 const playEvenGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ').trim();
-  console.log(`Hello, ${name}!`);
+  brain.showGreeting();
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const playerName = brain.getPlayerName();
 
-  let userLost = false;
+  brain.showMessage('Answer "yes" if the number is even, otherwise answer "no".');
 
-  for (let i = 1; i <= 3; i += 1) {
-    const number = Math.ceil(Math.random() * 1000);
+  let playerLost = false;
+
+  for (let i = 1; i <= brain.maxRoundsCount; i += 1) {
+    const number = brain.getRandomNumber(1000);
     const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
-    console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('Your answer: ').trim();
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      userLost = true;
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+
+    const question = `Question: ${number}`;
+    brain.showMessage(question);
+
+    playerLost = !brain.checkPlayerAnswer(correctAnswer);
+    if (playerLost) {
       break;
     }
   }
-  console.log(userLost ? `Let's try again, ${name}!` : `Congratulations, ${name}!`);
+  brain.showResult(playerName, playerLost);
 };
 
 playEvenGame();
