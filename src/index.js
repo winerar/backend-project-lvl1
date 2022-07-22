@@ -38,4 +38,6 @@ export const showResult = (playerName, playerLost) => {
   }
 };
 
+export const showTask = (task) => console.log(task);
+
 export const getRandomNumber = (maxNumber) => Math.floor(Math.random() * maxNumber);
