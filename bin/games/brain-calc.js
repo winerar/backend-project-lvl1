@@ -6,7 +6,7 @@ const playCalcGame = () => {
 
   const playerName = brain.getPlayerName();
 
-  brain.showTask('What is the result of the expression?');
+  brain.showMessage('What is the result of the expression?');
 
   let playerLost = false;
 
@@ -24,7 +24,9 @@ const playCalcGame = () => {
       default: correctAnswer = 'Error! Operation is not defined';
     }
 
-    brain.showTask(`Question: ${number1} ${operator} ${number2}`);
+    const question = `Question: ${number1} ${operator} ${number2}`;
+    brain.showMessage(question);
+
     playerLost = !brain.checkPlayerAnswer(correctAnswer);
     if (playerLost) {
       break;
