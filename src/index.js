@@ -41,4 +41,3 @@ export const showResult = (playerName, playerLost) => {
     showCongratulation(playerName);
   }
 };
-
