@@ -18,9 +18,9 @@ const playCalcGame = () => {
     let correctAnswer;
     let operator;
     switch (operation) {
-      case 0: correctAnswer = String(number1 + number2); operator = '+'; break;
-      case 1: correctAnswer = String(number1 - number2); operator = '-'; break;
-      case 2: correctAnswer = String(number1 * number2); operator = '*'; break;
+      case 0: correctAnswer = number1 + number2; operator = '+'; break;
+      case 1: correctAnswer = number1 - number2; operator = '-'; break;
+      case 2: correctAnswer = number1 * number2; operator = '*'; break;
       default: correctAnswer = 'Error! Operation is not defined';
     }
 

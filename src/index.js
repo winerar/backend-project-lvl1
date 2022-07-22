@@ -18,7 +18,7 @@ export const getPlayerName = () => {
 
 export const checkPlayerAnswer = (correctAnswer) => {
   const playerAnswer = readlineSync.question('Your answer: ').trim();
-  if (playerAnswer === correctAnswer) {
+  if (playerAnswer === String(correctAnswer)) {
     showMessage('Correct!');
     return true;
   }
