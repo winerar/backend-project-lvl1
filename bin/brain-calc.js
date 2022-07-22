@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import * as brainUtils from '../src/brain-utils.js';
 
-const playGame = () => {
+const playCalcGame = () => {
   brainUtils.showGreeting();
 
   const playerName = brainUtils.getPlayerName();
@@ -34,4 +34,4 @@ const playGame = () => {
   brainUtils.showResult(playerName, playerLost);
 };
 
-playGame();
+playCalcGame();

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const playGame = () => {
+const playEvenGame = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ').trim();
   console.log(`Hello, ${name}!`);
@@ -26,4 +26,4 @@ const playGame = () => {
   console.log(userLost ? `Let's try again, ${name}!` : `Congratulations, ${name}!`);
 };
 
-playGame();
+playEvenGame();
