@@ -7,3 +7,5 @@
 <a href="https://asciinema.org/a/510162" target="_blank"><img src="https://asciinema.org/a/510162.svg" /></a>
 #### brain-gcd.js:
 <a href="https://asciinema.org/a/510199" target="_blank"><img src="https://asciinema.org/a/510199.svg" /></a>
+#### brain-progression.js:
+<a href="https://asciinema.org/a/510260" target="_blank"><img src="https://asciinema.org/a/510260.svg" /></a>
