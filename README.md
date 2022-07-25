@@ -13,7 +13,8 @@
 * Node.js v12.22.9 и выше
 ### Установка
 1. Склонируйте этот репозиторий `git clone https://github.com/winerar/backend-project-lvl1.git`
-2. Выполните публикацию `make publish`
+2. Выполните установку зависимостей `npm install`
+2. Выполните публикацию пакета `make publish`
 3. Выполните установку пакета `make link`
 ### Запуск
 * "Проверка на чётность": `brain-even`
