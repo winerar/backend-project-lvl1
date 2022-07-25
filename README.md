@@ -16,6 +16,11 @@
 2. Выполните публикацию `make publish`
 3. Выполните установку пакета `make link`
 ### Запуск
+* "Проверка на чётность": `brain-even`
+* "Калькулятор": `brain-calc`
+* "НОД": `brain-gcd`
+* "Арифметическая прогрессия": `brain-progression`
+* "Простое ли число?": `brain-prime`
 ### Аскинемы
 #### brain-even.js:
 <a href="https://asciinema.org/a/510282" target="_blank"><img src="https://asciinema.org/a/510282.svg" /></a>
